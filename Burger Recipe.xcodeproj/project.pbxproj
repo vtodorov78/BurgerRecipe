@@ -21,6 +21,7 @@
 		767A7E1827727571006CD7E7 /* BurgerResources in Resources */ = {isa = PBXBuildFile; fileRef = 767A7E1727727571006CD7E7 /* BurgerResources */; };
 		767A7E1B27727596006CD7E7 /* Burger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A7E1A27727596006CD7E7 /* Burger.swift */; };
 		767A7E1D2772766E006CD7E7 /* BurgerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A7E1C2772766E006CD7E7 /* BurgerModel.swift */; };
+		76CC4C882789C3D2006991F6 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CC4C872789C3D2006991F6 /* RecipeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		767A7E1727727571006CD7E7 /* BurgerResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BurgerResources; sourceTree = "<group>"; };
 		767A7E1A27727596006CD7E7 /* Burger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Burger.swift; sourceTree = "<group>"; };
 		767A7E1C2772766E006CD7E7 /* BurgerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerModel.swift; sourceTree = "<group>"; };
+		76CC4C872789C3D2006991F6 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				7675F5BE2780E40E001A5F7B /* AddRecipe.storyboard */,
 				7675F5C22780E9D3001A5F7B /* RecipeDetail.storyboard */,
 				7659DC5D2755782000CF031D /* LaunchScreen.storyboard */,
+				76CC4C872789C3D2006991F6 /* RecipeTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				767826C0276A96F000E7E64D /* FavouritesViewController.swift in Sources */,
 				767A7E1B27727596006CD7E7 /* Burger.swift in Sources */,
 				7675F5C52780EB0F001A5F7B /* RecipeDetailViewController.swift in Sources */,
+				76CC4C882789C3D2006991F6 /* RecipeTableViewCell.swift in Sources */,
 				7675F5C12780E71A001A5F7B /* AddRecipeViewController.swift in Sources */,
 				7659DC532755781F00CF031D /* AppDelegate.swift in Sources */,
 				7659DC552755781F00CF031D /* SceneDelegate.swift in Sources */,
