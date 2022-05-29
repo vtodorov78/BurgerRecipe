@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Burger" representedClassName=".Burger" syncable="YES" codeGenerationType="category">
+        <attribute name="burgerType" attributeType="String" defaultValueString="vegetarian"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="ingredients" attributeType="String" defaultValueString=""/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <attribute name="thumbnail" optional="YES" attributeType="Binary"/>
+    </entity>
+    <elements>
+        <element name="Burger" positionX="-63" positionY="-18" width="128" height="104"/>
+    </elements>
+</model>

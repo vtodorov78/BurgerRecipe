@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NkN-O1-anG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Recipe-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="AddRecipeViewController" customModule="Burger_Recipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a name for your recipe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dva-B8-NWg">
+                                <rect key="frame" x="20" y="100" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="T8n-be-afS">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="64"/>
+                                    </constraint>
+                                </constraints>
+                                <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Add all needed ingredients" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eVb-2j-Cwk">
+                                <rect key="frame" x="20" y="142" width="374" height="712"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
+                                <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dva-B8-NWg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="5M4-Gc-xWr"/>
+                            <constraint firstItem="dva-B8-NWg" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="9fL-SQ-hhb"/>
+                            <constraint firstItem="eVb-2j-Cwk" firstAttribute="top" secondItem="dva-B8-NWg" secondAttribute="bottom" constant="8" id="ABO-zD-EhK"/>
+                            <constraint firstItem="eVb-2j-Cwk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Msk-Yi-Dcx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="eVb-2j-Cwk" secondAttribute="bottom" constant="8" id="b1q-LJ-EtW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dva-B8-NWg" secondAttribute="trailing" constant="20" id="n5a-4H-BhO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eVb-2j-Cwk" secondAttribute="trailing" constant="20" id="sf2-bc-dtm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Recipe" id="FdV-SU-rCg">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="MMN-YE-SnD">
+                            <connections>
+                                <action selector="didTapCancel:" destination="Y6W-OH-hqX" id="xuM-qr-8LF"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="qfj-ma-khW">
+                            <connections>
+                                <action selector="didTapSave:" destination="Y6W-OH-hqX" id="ui5-z2-TYX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ingredientsTextView" destination="eVb-2j-Cwk" id="dBW-J3-f62"/>
+                        <outlet property="nameTextField" destination="dva-B8-NWg" id="VgC-cv-KcR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="50.892857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NZA-4E-94H">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NkN-O1-anG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aI2-lq-PgP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="OYa-TV-2HS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5wG-WU-wHx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="50.892857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemFillColor">
+            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

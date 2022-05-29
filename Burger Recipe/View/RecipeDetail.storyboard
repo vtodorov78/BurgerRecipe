@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Recipe Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="RecipeDetailViewController" customModule="Burger_Recipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tpp-Db-1tI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Cwo-9a-Iof"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ff8-Ah-8dt">
+                                <rect key="frame" x="20" y="248" width="374" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pz3-Of-BJz">
+                                <rect key="frame" x="20" y="286" width="374" height="584"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pz3-Of-BJz" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="8" id="5eI-YI-2Jh"/>
+                            <constraint firstItem="Tpp-Db-1tI" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="6oM-xQ-7SZ"/>
+                            <constraint firstItem="Ff8-Ah-8dt" firstAttribute="top" secondItem="Tpp-Db-1tI" secondAttribute="bottom" constant="8" id="ONs-kA-vO2"/>
+                            <constraint firstItem="Ff8-Ah-8dt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Q1K-My-Pei"/>
+                            <constraint firstItem="Pz3-Of-BJz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Q25-9M-Fq7"/>
+                            <constraint firstItem="Ff8-Ah-8dt" firstAttribute="top" secondItem="Tpp-Db-1tI" secondAttribute="bottom" constant="8" id="UrE-bD-cRT"/>
+                            <constraint firstItem="Pz3-Of-BJz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="YnG-1c-xu9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ff8-Ah-8dt" secondAttribute="trailing" constant="20" id="eAU-BX-kkY"/>
+                            <constraint firstItem="Tpp-Db-1tI" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="iMu-Ia-IKc"/>
+                            <constraint firstItem="Pz3-Of-BJz" firstAttribute="top" secondItem="Ff8-Ah-8dt" secondAttribute="bottom" constant="8" symbolic="YES" id="ogh-Mg-815"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Pz3-Of-BJz" secondAttribute="trailing" constant="20" id="vUQ-2L-deg"/>
+                            <constraint firstItem="Tpp-Db-1tI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vvB-Xq-zL8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerImageView" destination="Tpp-Db-1tI" id="UcL-tm-faK"/>
+                        <outlet property="ingredientsTextView" destination="Pz3-Of-BJz" id="aGY-3r-uzm"/>
+                        <outlet property="nameLabel" destination="Ff8-Ah-8dt" id="Kuw-nt-GLh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="78.348214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
