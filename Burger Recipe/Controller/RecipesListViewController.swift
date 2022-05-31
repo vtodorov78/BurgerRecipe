@@ -23,6 +23,8 @@ class RecipesListViewController: UIViewController {
         
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableView.automaticDimension
+        
+        tableView.register(UINib(nibName: "RecipeTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "BurgerCell")
     }
     
     override func viewDidLayoutSubviews() {

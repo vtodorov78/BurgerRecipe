@@ -22,6 +22,7 @@
 		767A7E1B27727596006CD7E7 /* BurgerJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A7E1A27727596006CD7E7 /* BurgerJSON.swift */; };
 		767A7E1D2772766E006CD7E7 /* BurgerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A7E1C2772766E006CD7E7 /* BurgerModel.swift */; };
 		76CC4C882789C3D2006991F6 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CC4C872789C3D2006991F6 /* RecipeTableViewCell.swift */; };
+		76E91E512844F74F000C0245 /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76E91E502844F74F000C0245 /* RecipeTableViewCell.xib */; };
 		76E9C0492843C72400CBF681 /* BurgerRecipe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76E9C0472843C72400CBF681 /* BurgerRecipe.xcdatamodeld */; };
 		76E9C04F2843CA2000CBF681 /* Burger+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E9C04E2843CA2000CBF681 /* Burger+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		767A7E1A27727596006CD7E7 /* BurgerJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerJSON.swift; sourceTree = "<group>"; };
 		767A7E1C2772766E006CD7E7 /* BurgerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerModel.swift; sourceTree = "<group>"; };
 		76CC4C872789C3D2006991F6 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		76E91E502844F74F000C0245 /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
 		76E9C0482843C72400CBF681 /* BurgerRecipe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BurgerRecipe.xcdatamodel; sourceTree = "<group>"; };
 		76E9C04E2843CA2000CBF681 /* Burger+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Burger+CoreDataClass.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +122,7 @@
 				7675F5C22780E9D3001A5F7B /* RecipeDetail.storyboard */,
 				7659DC5D2755782000CF031D /* LaunchScreen.storyboard */,
 				76CC4C872789C3D2006991F6 /* RecipeTableViewCell.swift */,
+				76E91E502844F74F000C0245 /* RecipeTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76E91E512844F74F000C0245 /* RecipeTableViewCell.xib in Resources */,
 				7659DC5F2755782000CF031D /* LaunchScreen.storyboard in Resources */,
 				7675F5C32780E9D3001A5F7B /* RecipeDetail.storyboard in Resources */,
 				767A7E1827727571006CD7E7 /* BurgerResources in Resources */,

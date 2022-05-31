@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tpp-Db-1tI">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tpp-Db-1tI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="Cwo-9a-Iof"/>
@@ -43,6 +43,14 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="On7-5A-3v6">
+                                <rect key="frame" x="175" y="87.5" width="64" height="64"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="AfD-md-fxl"/>
+                                    <constraint firstAttribute="height" constant="64" id="GFz-RQ-VUO"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -56,13 +64,16 @@
                             <constraint firstItem="Pz3-Of-BJz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="YnG-1c-xu9"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ff8-Ah-8dt" secondAttribute="trailing" constant="20" id="eAU-BX-kkY"/>
                             <constraint firstItem="Tpp-Db-1tI" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="iMu-Ia-IKc"/>
+                            <constraint firstItem="On7-5A-3v6" firstAttribute="centerX" secondItem="Tpp-Db-1tI" secondAttribute="centerX" id="kKb-JI-V1b"/>
                             <constraint firstItem="Pz3-Of-BJz" firstAttribute="top" secondItem="Ff8-Ah-8dt" secondAttribute="bottom" constant="8" symbolic="YES" id="ogh-Mg-815"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Pz3-Of-BJz" secondAttribute="trailing" constant="20" id="vUQ-2L-deg"/>
                             <constraint firstItem="Tpp-Db-1tI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vvB-Xq-zL8"/>
+                            <constraint firstItem="On7-5A-3v6" firstAttribute="centerY" secondItem="Tpp-Db-1tI" secondAttribute="centerY" id="yaJ-6D-2Fl"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bannerImageView" destination="Tpp-Db-1tI" id="UcL-tm-faK"/>
+                        <outlet property="favouriteImageView" destination="On7-5A-3v6" id="HbY-ze-vD6"/>
                         <outlet property="ingredientsTextView" destination="Pz3-Of-BJz" id="aGY-3r-uzm"/>
                         <outlet property="nameLabel" destination="Ff8-Ah-8dt" id="Kuw-nt-GLh"/>
                     </connections>
@@ -73,6 +84,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

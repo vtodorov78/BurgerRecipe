@@ -6,24 +6,70 @@
 //
 
 import UIKit
+import CoreData
 
 class FavouritesViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    var resultsController: NSFetchedResultsController<Burger>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.dataSource = self
+//        tableView.delegate = self
+        
+        tableView.register(UINib(nibName: "RecipeTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "BurgerCell")
+        
+        if resultsController == nil {
+            let request: NSFetchRequest<Burger> = Burger.fetchRequest()
+            let predicate = NSPredicate(format: "favourite == true")
+            let sort = NSSortDescriptor(key: "name", ascending: true)
+            request.sortDescriptors = [sort]
+            request.predicate = predicate
+            
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            resultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            resultsController.delegate = self
+            
+            do {
+                try resultsController.performFetch()
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            } catch {
+                print(error)
+            }
+        }
 
-        // Do any additional setup after loading the view.
+    }
+}
+
+extension FavouritesViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return resultsController.fetchedObjects?.count ?? 0
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BurgerCell", for: indexPath) as! RecipeTableViewCell
+        let burger = resultsController.object(at: indexPath)
+        cell.nameLabel?.text = burger.name
+        cell.ingredientsLabel?.text = burger.ingredients
+        cell.thumbnailImageView?.image = burger.thumbnailImage
+        return cell
     }
-    */
-
 }
+
+extension FavouritesViewController: NSFetchedResultsControllerDelegate {
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+}
+
+
