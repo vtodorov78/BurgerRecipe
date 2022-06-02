@@ -52,12 +52,22 @@ class RecipeDetailViewController: UIViewController {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 1.5
         
-        let attributes = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body),
-                          NSAttributedString.Key.paragraphStyle: paragraphStyle,
-                          NSAttributedString.Key.foregroundColor: UIColor.label]
+        let attributes = [NSAttributedString.Key.font : UIFont.preferredFont(forTextStyle: .body),
+                          NSAttributedString.Key.paragraphStyle : paragraphStyle,
+                          NSAttributedString.Key.foregroundColor : UIColor.label]
         
         
         ingredientsTextView.attributedText = NSAttributedString(string: bulletedList(forIngredients: burger.ingredients!), attributes: attributes)
     }
 
+}
+
+extension RecipeDetailViewController: RecipeSelectionDelegate {
+    
+    func burgerSelected(_ burger: Burger) {
+        self.burger = burger
+        setupUI()
+    }
+    
+    
 }

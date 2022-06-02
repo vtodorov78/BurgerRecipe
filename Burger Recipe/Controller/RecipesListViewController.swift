@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol RecipeSelectionDelegate: AnyObject {
+    func burgerSelected(_ burger: Burger)
+}
+
 class RecipesListViewController: UIViewController {
     
     var model = BurgerModel()
     var selectedType: BurgerType?
+    
+    weak var delegate: RecipeSelectionDelegate?
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -36,13 +42,7 @@ class RecipesListViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showRecipeDetail" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let burger = model.burgers[indexPath.row]
-                let detailVC = segue.destination as? RecipeDetailViewController
-                detailVC?.burger = burger
-            }
-        } else if segue.identifier == "addRecipe" {
+        if segue.identifier == "addRecipe" {
             let navVC = segue.destination as? UINavigationController
             let addVC = navVC?.viewControllers.first as? AddRecipeViewController
             addVC?.delegate = self
@@ -90,7 +90,15 @@ extension RecipesListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let burger = model.burgers[indexPath.row]
+        delegate?.burgerSelected(burger)
+        
+        if let detailVC = delegate as? RecipeDetailViewController {
+            splitViewController?.showDetailViewController(detailVC, sender: nil)
+        }
+        
         tableView.deselectRow(at: indexPath, animated: true)
+        
     }
 }
 

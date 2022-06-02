@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7648207C284915AF00DBCED6 /* CustomSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7648207B284915AF00DBCED6 /* CustomSplitViewController.swift */; };
 		7659DC532755781F00CF031D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7659DC522755781F00CF031D /* AppDelegate.swift */; };
 		7659DC552755781F00CF031D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7659DC542755781F00CF031D /* SceneDelegate.swift */; };
 		7659DC5A2755781F00CF031D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7659DC582755781F00CF031D /* Main.storyboard */; };
@@ -28,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7648207B284915AF00DBCED6 /* CustomSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplitViewController.swift; sourceTree = "<group>"; };
+		7648207D2849191400DBCED6 /* Burger Recipe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Burger Recipe.entitlements"; sourceTree = "<group>"; };
 		7659DC4F2755781F00CF031D /* Burger Recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Burger Recipe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7659DC522755781F00CF031D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7659DC542755781F00CF031D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		7659DC512755781F00CF031D /* Burger Recipe */ = {
 			isa = PBXGroup;
 			children = (
+				7648207D2849191400DBCED6 /* Burger Recipe.entitlements */,
 				767A7E1927727583006CD7E7 /* Model */,
 				76C3C34D27838F38002C1D21 /* View */,
 				76C3C34C27838F1A002C1D21 /* Controller */,
@@ -110,6 +114,7 @@
 				767826BF276A96F000E7E64D /* FavouritesViewController.swift */,
 				7675F5C02780E71A001A5F7B /* AddRecipeViewController.swift */,
 				7675F5C42780EB0F001A5F7B /* RecipeDetailViewController.swift */,
+				7648207B284915AF00DBCED6 /* CustomSplitViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				767A7E1B27727596006CD7E7 /* BurgerJSON.swift in Sources */,
 				76E9C0492843C72400CBF681 /* BurgerRecipe.xcdatamodeld in Sources */,
 				7675F5C52780EB0F001A5F7B /* RecipeDetailViewController.swift in Sources */,
+				7648207C284915AF00DBCED6 /* CustomSplitViewController.swift in Sources */,
 				76CC4C882789C3D2006991F6 /* RecipeTableViewCell.swift in Sources */,
 				7675F5C12780E71A001A5F7B /* AddRecipeViewController.swift in Sources */,
 				7659DC532755781F00CF031D /* AppDelegate.swift in Sources */,
@@ -359,6 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Burger Recipe/Burger Recipe.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GWYT6568VG;
@@ -376,6 +383,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vtodorov.Burger-Recipe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -387,6 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Burger Recipe/Burger Recipe.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GWYT6568VG;
@@ -404,6 +413,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vtodorov.Burger-Recipe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

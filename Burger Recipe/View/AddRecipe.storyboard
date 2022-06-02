@@ -24,14 +24,14 @@
                                     </constraint>
                                 </constraints>
                                 <color key="textColor" systemColor="tertiaryLabelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Add all needed ingredients" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eVb-2j-Cwk">
                                 <rect key="frame" x="20" y="142" width="374" height="712"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                 <color key="textColor" systemColor="tertiaryLabelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
