@@ -1,3 +1,3 @@
 # BurgerRecipe
 
-This is a mobile application for burger recipies.
+This is a simple iOS application for burger recipies.
